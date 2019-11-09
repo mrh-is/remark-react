@@ -38,8 +38,7 @@
     "xo": "^0.25.0"
   },
   "scripts": {
-    "#": "remark . -qfo && ",
-    "format": "prettier --write \"**/*.js\" && xo --fix && stylelint src/index.css --fix",
+    "format": "remark . -qfo && prettier --write \"**/*.js\" && xo --fix && stylelint src/index.css --fix",
     "build:js": "browserify src -p tinyify -t [ babelify --presets [ @babel/preset-env @babel/preset-react ] ] -o dest/index.js",
     "build:css": "postcss src/index.css -o dest/index.css",
     "build:html": "rehype -u preset-minify -u prevent-favicon-request src -o dest",
